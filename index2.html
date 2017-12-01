@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Найдем модальное окно</title>
+    <style>
+        .modal-content {
+            display: none;
+        }
+        .modal-content-show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+<div class="user-block">
+    <a href="#" class="login">Вход</a>
+</div>
+
+    <div class="modal-content">
+        <div>
+        <span>Модальное окно</span>
+        </div>
+        <button class="modal-content-close" type="button">Закрыть</button>
+    </div>
+
+    <script>
+        var link = document.querySelector(".login");
+        var popup = document.querySelector(".modal-content");
+        var close = document.querySelector(".modal-content-close");
+
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            popup.classList.add("modal-content-show"); // Без точки! Мы оперируем только названием классов
+        });
+
+        close.addEventListener("click", function (event) {
+            event.preventDefault();
+            popup.classList.remove("modal-content-show");
+        });
+    </script>
+</body>
+</html>

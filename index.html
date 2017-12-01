@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Шапка сайта</title>
+</head>
+<body>
+    <div class="container clearfix">
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="#">Информация</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="text.html">Прайс-лист</a></li>
+                <li><a href="catalog.html">Магазин</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <div class="user-block">
+            <a href="#" class="login">Вход</a>
+        </div>
+
+    </div>
+
+    <script>
+        var link = document.querySelector(".login");
+
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            console.log("Клик по ссылке вход");
+        });
+    </script>
+
+</body>
+</html>
