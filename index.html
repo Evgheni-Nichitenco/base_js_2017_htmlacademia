@@ -1,35 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Шапка сайта</title>
+    <link rel="stylesheet" href="main.css">
+    <title>Работа с модальным окном</title>
 </head>
+
 <body>
-    <div class="container clearfix">
-        <nav class="main-navigation">
-            <ul>
-                <li><a href="#">Информация</a></li>
-                <li><a href="#">Новости</a></li>
-                <li><a href="text.html">Прайс-лист</a></li>
-                <li><a href="catalog.html">Магазин</a></li>
-                <li><a href="#">Контакты</a></li>
-            </ul>
-        </nav>
-
-        <div class="user-block">
-            <a href="#" class="login">Вход</a>
-        </div>
-
+    <div class="user-block">
+        <a href="#" class="login">Вход</a>
     </div>
 
-    <script>
-        var link = document.querySelector(".login");
+    <div class="modal-content">
+        <div class="modal-content-close">x</div>
 
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-            console.log("Клик по ссылке вход");
-        });
-    </script>
+            <h4>Ваш аккаунт</h4>
 
+        <div class="win">
+        <form action="https://territaland.ru" method="post" class="login-form">
+            <input class="icon-user" type="text" name="login"> <br>
+            <input class="icon-user" type="password" name="password">
+            <br>
+            <button class="btn" type="submit">Войти</button>
+        </form>
+        </div>
+    </div>
+
+<script src="main.js"></script>
 </body>
 </html>
